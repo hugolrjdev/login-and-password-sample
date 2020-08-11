@@ -17,12 +17,6 @@ var users = [
 
 ]
 
-document.querySelectorAll('#loginArea > [name]').forEach( ( field, index )=>{
-
-  console.log(field.name, index)
-
-});
-
 users.forEach( (user, index)=>{
 
     console.log(
@@ -30,5 +24,23 @@ users.forEach( (user, index)=>{
          user.password,
          index
          );
+
+} );
+
+
+var fields = document.querySelectorAll('#loginArea > [name]');
+
+fields.forEach( (field, index) => {
+
+  console.log(field.name) 
+
+} );
+
+
+
+document.querySelector('#loginArea').addEventListener( 'submit', (event)=>{
+
+  event.preventDefault();
+  alert('deu rock')
 
 } );
